@@ -9,6 +9,8 @@ for line in sys.stdin:
 endef
 export PRINT_HELP_PYSCRIPT
 
+PORT ?= 47967
+
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
@@ -25,3 +27,9 @@ uninstall: ## remove Jupyter kernel from user environment
 
 dist-clean: uninstall ## remove env files
 	rm -rf .venv
+
+jupyter-notebook: install  ## run a notebook server (system-jupyter)
+	jupyter notebook --debug --no-browser --port=$(PORT)
+
+jupyter-lab: install  ## run a jupyterlab server (system-jupyter)
+	jupyter lab --debug --no-browser --port=$(PORT)
