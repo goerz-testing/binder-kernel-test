@@ -1,0 +1,3 @@
+#!/bin/bash
+set -e
+ipykernel install --user --name binder-kernel-test --display-name "Binder Kernel Test"
