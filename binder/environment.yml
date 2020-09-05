@@ -1,0 +1,14 @@
+name: binder-kernel-test
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - qutip=4.5
+  - matplotlib
+  - scipy
+  - numpy
+  - ipykernel
+  - pip
+  - pip:
+    - watermark
+    - krotov
