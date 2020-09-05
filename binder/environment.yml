@@ -9,6 +9,8 @@ dependencies:
   - numpy
   - ipykernel
   - pip
+  - ipywidgets
+  - jupyter_contrib_nbextensions
   - pip:
     - watermark
     - krotov
