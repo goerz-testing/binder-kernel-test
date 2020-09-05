@@ -1,3 +1,4 @@
 #!/bin/bash
 set -e
 python -m ipykernel install --user --name binder-kernel-test --display-name "Binder Kernel Test"
+python binder/disable_brackets.py
